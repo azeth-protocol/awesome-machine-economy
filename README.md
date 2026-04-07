@@ -65,6 +65,7 @@ Each layer below maps to a part of this stack.
 - [SIWE (Sign-In with Ethereum)](https://login.xyz/) - Authentication standard for Ethereum wallets. Foundation for agent auth flows.
 - [W3C Decentralized Identifiers](https://www.w3.org/TR/did-core/) - Self-sovereign identity standard. Underlies many agent identity systems.
 - [W3C Verifiable Credentials](https://www.w3.org/TR/vc-data-model/) - Cryptographically verifiable claims. Used by Google AP2 for agent authorization.
+- [ZKProofport](https://zkproofport.app) - Zero-knowledge proof generation for AI agent identity. Prove Coinbase KYC, Country, Google OIDC, Google Workspace, or Microsoft 365 affiliation without revealing personal data. AWS Nitro Enclave TEE proving, x402-paid, ERC-8004 registered. ([Agent MCP](https://www.npmjs.com/package/@zkproofport-ai/mcp) | [GitHub](https://github.com/zkproofport/proofport-ai))
 
 ### Full-Stack Trust Infrastructure
 
@@ -112,6 +113,7 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 - [@x402/fetch](https://www.npmjs.com/package/@x402/fetch) - Fetch wrapper that auto-handles 402 responses.
 - [@azeth/provider](https://www.npmjs.com/package/@azeth/provider) - x402 provider tooling. Pre-settled smart account payments, SIWx sessions, payment agreements. ([GitHub](https://github.com/azeth-protocol/provider))
 - [xPay Facilitator](https://github.com/xpaysh/xpay-x402) - Open x402 facilitator. No auth required.
+- [@zkproofport-ai/mcp](https://www.npmjs.com/package/@zkproofport-ai/mcp) - Zero-knowledge proof generation MCP server paid via x402. Agents pay USDC on Base for ZK identity proofs (Coinbase KYC, Country, Google OIDC, Workspace, MS 365). Server-side proving in AWS Nitro Enclave TEE.
 
 ### Other Payment Protocols
 
