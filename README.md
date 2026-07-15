@@ -139,6 +139,7 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 - [mcp.so](https://mcp.so/) - MCP server registry. Searchable directory with install instructions.
 - [PulseMCP](https://pulsemcp.com/) - MCP server directory with categories and ratings.
 - [Olas](https://olas.network/) - Decentralized agent registry. NFT-based, staking-required registration.
+- [AgentServices](https://agentservices.to) - Production x402-paid API directory with 54 services. Agents discover and pay-per-call for data APIs. 37 MCP tools. On official MCP Registry.
 
 ---
 
@@ -199,6 +200,7 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 - [Uniswap MCP](https://github.com/uniswap) - DEX swaps and liquidity.
 - [1inch MCP](https://1inch.io/) - DEX aggregator for optimal swap routing.
 - [Aave MCP](https://aave.com/) - Lending and borrowing protocol tools.
+- [AgentServices MCP](https://api.agentservices.to/mcp) - 37 tools: crypto market data, DeFi analytics, onchain intelligence, dispute resolution. x402-paid. ([Site](https://agentservices.to))
 
 > See [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) for the comprehensive MCP directory.
 
