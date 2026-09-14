@@ -70,6 +70,7 @@ Each layer below maps to a part of this stack.
 ### Full-Stack Trust Infrastructure
 
 - [Azeth](https://azeth.ai) - ERC-8004 identity, on-chain reputation, guardian-protected smart accounts, x402 payments, and service discovery in one SDK. MCP server with 30+ tools for AI agents. ([GitHub](https://github.com/azeth-protocol) | [npm](https://www.npmjs.com/package/@azeth/sdk))
+- [AffixIO](https://www.npmjs.com/package/affixio) - Agentic Pay Kit with x402BeforePay host-side action attestation before pay (signed yes/no on host, not person KYC), agenticPay, mcpToolGate, and KYA createAgentTrust. ([GitHub](https://github.com/AffixIO/SDK)) ([docs](https://www.affix-io.com/agent-trust/))
 
 ---
 
