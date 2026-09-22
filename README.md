@@ -121,6 +121,7 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 - [OpenAI ACP](https://openai.com/) - Agentic Commerce Protocol. Stripe-powered checkout for ChatGPT and consumer AI.
 - [Visa TAP](https://developer.visa.com/) - Trusted Agent Protocol. TradFi-to-crypto agent payment bridge.
 - [Mastercard Agent Pay](https://developer.mastercard.com/) - Tokenized payments and agent wallet integration via card networks.
+- [Nano (XNO)](https://nano.org) - Feeless, sub-second settlement rail. Block-lattice DAG, no miners, no gas.
 - [Superfluid](https://superfluid.finance/) - Real-time payment streaming. Pay per second for continuous services.
 - [Sablier](https://sablier.com/) - Token streaming. Linear and dynamic payment schedules.
 - [Lightning Network](https://lightning.network/) - Bitcoin L2. Sub-second settlement, near-zero fees.
