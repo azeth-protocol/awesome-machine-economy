@@ -192,6 +192,7 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 
 *MCP servers for payments, DeFi, and machine economy operations.*
 
+- [Agent Payment Node](https://github.com/nuanu-ai/agent-payment-node) - Local CLI and stdio MCP payments on macOS; signing requires foreground owner approval.
 - [Azeth MCP](https://www.npmjs.com/package/@azeth/mcp-server) - Smart accounts, x402 payments, reputation, discovery, messaging. 30+ tools. ([GitHub](https://github.com/azeth-protocol/mcp-server))
 - [Coinbase AgentKit](https://github.com/coinbase/agentkit) - Wallet management, transfers, DeFi on Base.
 - [deBridge MCP](https://debridge.finance/) - Cross-chain swaps and bridges.
