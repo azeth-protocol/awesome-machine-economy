@@ -115,6 +115,7 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 - [@azeth/provider](https://www.npmjs.com/package/@azeth/provider) - x402 provider tooling. Pre-settled smart account payments, SIWx sessions, payment agreements. ([GitHub](https://github.com/azeth-protocol/provider))
 - [xPay Facilitator](https://github.com/xpaysh/xpay-x402) - Open x402 facilitator. No auth required.
 - [@zkproofport-ai/mcp](https://www.npmjs.com/package/@zkproofport-ai/mcp) - Zero-knowledge proof generation MCP server paid via x402. Agents pay USDC on Base for ZK identity proofs (Coinbase KYC, Country, Google OIDC, Workspace, MS 365). Server-side proving in AWS Nitro Enclave TEE.
+- [stipend](https://github.com/stipend-sh/stipend) - Non-custodial USDC wallet on Base for agents. Buyer-side x402 auto-pay; spending caps and destination allowlist enforced in code, not in a prompt.
 
 ### Other Payment Protocols
 
@@ -193,6 +194,7 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 
 *MCP servers for payments, DeFi, and machine economy operations.*
 
+- [Agent Payment Node](https://github.com/nuanu-ai/agent-payment-node) - Local CLI and stdio MCP payments on macOS; signing requires foreground owner approval.
 - [Azeth MCP](https://www.npmjs.com/package/@azeth/mcp-server) - Smart accounts, x402 payments, reputation, discovery, messaging. 30+ tools. ([GitHub](https://github.com/azeth-protocol/mcp-server))
 - [Coinbase AgentKit](https://github.com/coinbase/agentkit) - Wallet management, transfers, DeFi on Base.
 - [deBridge MCP](https://debridge.finance/) - Cross-chain swaps and bridges.
