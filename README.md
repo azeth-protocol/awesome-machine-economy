@@ -211,6 +211,7 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 *SDKs, CLIs, and infrastructure for building in the machine economy.*
 
 - [Azeth SDK](https://www.npmjs.com/package/@azeth/sdk) - TypeScript SDK. Smart accounts, x402 payments, reputation, discovery, messaging. ([GitHub](https://github.com/azeth-protocol/sdk))
+- [AffixIO](https://github.com/AffixIO/SDK) - Node SDK that issues signed allow/deny decisions before agent tool calls and x402 payments run. MCP, LangChain, OpenAI Agents.
 - [Azeth CLI](https://www.npmjs.com/package/@azeth/cli) - Register, discover, pay, and manage machine participants from the terminal.
 - [viem](https://viem.sh/) - TypeScript Ethereum library. Type-safe, tree-shakeable.
 - [ethers.js](https://ethers.org/) - Complete Ethereum library. Widely adopted.
