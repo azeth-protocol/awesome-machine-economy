@@ -56,20 +56,20 @@ Each layer below maps to a part of this stack.
 - [ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) - Machine economy trust registry. On-chain identity, reputation, and validation for agents, services, and infrastructure. ERC-721 based.
 - [Ethereum Attestation Service (EAS)](https://attest.org/) - On-chain and off-chain attestation infrastructure. Schema-based, composable attestations.
 - [Verax](https://www.ver.ax/) - Attestation registry on Linea. Composable on-chain trust signals.
-- [Olas Registry](https://registry.olas.network/) - On-chain agent registration via NFTs. Staking-based commitment signals.
+- [Olas Registry](https://marketplace.olas.network/) - On-chain agent registration via NFTs. Staking-based commitment signals.
 - [ENS](https://ens.domains/) - Human-readable names for addresses and service endpoints.
 
 ### Authentication
 
-- [ERC-8128](https://eips.ethereum.org/EIPS/eip-8128) - Sign-in with agents. HTTP challenge-response authentication using smart account signatures.
+- [ERC-8128](https://github.com/ethereum/ERCs/pull/1478) - Sign-in with agents. HTTP challenge-response authentication using smart account signatures.
 - [SIWE (Sign-In with Ethereum)](https://login.xyz/) - Authentication standard for Ethereum wallets. Foundation for agent auth flows.
 - [W3C Decentralized Identifiers](https://www.w3.org/TR/did-core/) - Self-sovereign identity standard. Underlies many agent identity systems.
 - [W3C Verifiable Credentials](https://www.w3.org/TR/vc-data-model/) - Cryptographically verifiable claims. Used by Google AP2 for agent authorization.
-- [ZKProofport](https://zkproofport.app) - Zero-knowledge proof generation for AI agent identity. Prove Coinbase KYC, Country, Google OIDC, Google Workspace, or Microsoft 365 affiliation without revealing personal data. AWS Nitro Enclave TEE proving, x402-paid, ERC-8004 registered. ([Agent MCP](https://www.npmjs.com/package/@zkproofport-ai/mcp))
+- [ZKProofport](https://www.zkproofport.com) - Zero-knowledge proof generation for AI agent identity. Prove Coinbase KYC, Country, Google OIDC, Google Workspace, or Microsoft 365 affiliation without revealing personal data. AWS Nitro Enclave TEE proving, x402-paid, ERC-8004 registered. ([Agent MCP](https://www.npmjs.com/package/@zkproofport-ai/mcp))
 
 ### Full-Stack Trust Infrastructure
 
-- [Azeth](https://azeth.ai) - ERC-8004 identity, on-chain reputation, guardian-protected smart accounts, x402 payments, and service discovery in one SDK. MCP server with 30+ tools for AI agents. ([GitHub](https://github.com/azeth-protocol) | [npm](https://www.npmjs.com/package/@azeth/sdk))
+- [Azeth](https://azeth.ai) - ERC-8004 identity, on-chain reputation, guardian-protected smart accounts, x402 payments, and service discovery in one SDK. MCP server with 35+ tools for AI agents. ([GitHub](https://github.com/azeth-protocol) | [npm](https://www.npmjs.com/package/@azeth/sdk))
 
 ---
 
@@ -94,7 +94,6 @@ Each layer below maps to a part of this stack.
 ### Infrastructure
 
 - [Pimlico](https://pimlico.io/) - ERC-4337 bundler and paymaster. Alto (open-source bundler).
-- [Stackup](https://stackup.sh/) - ERC-4337 bundler and paymaster infrastructure.
 - [Alchemy Account Kit](https://www.alchemy.com/account-kit) - Smart account SDK with embedded wallets and gas management.
 
 ---
@@ -107,7 +106,7 @@ Each layer below maps to a part of this stack.
 
 The HTTP-native payment protocol. Server returns 402 with payment requirements, client pays on-chain, retries with proof.
 
-- [x402 Protocol](https://github.com/coinbase/x402) - The specification. Coinbase + Cloudflare. USDC-native, middleware-friendly.
+- [x402 Protocol](https://github.com/coinbase/x402) - The specification and reference SDKs. USDC-native, middleware-friendly. ([Site](https://www.x402.org/))
 - [@x402/hono](https://www.npmjs.com/package/@x402/hono) - x402 middleware for Hono.
 - [@x402/express](https://www.npmjs.com/package/@x402/express) - x402 middleware for Express.
 - [@x402/fetch](https://www.npmjs.com/package/@x402/fetch) - Fetch wrapper that auto-handles 402 responses.
@@ -118,7 +117,7 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 
 ### Other Payment Protocols
 
-- [Google AP2](https://developers.google.com/pay/agents) - Agent payment authorization. Payment-agnostic, Verifiable Credentials for audit trails.
+- [Google AP2](https://ap2-protocol.org/) - Agent payment authorization. Payment-agnostic, Verifiable Credentials for audit trails.
 - [OpenAI ACP](https://openai.com/) - Agentic Commerce Protocol. Stripe-powered checkout for ChatGPT and consumer AI.
 - [Visa TAP](https://developer.visa.com/) - Trusted Agent Protocol. TradFi-to-crypto agent payment bridge.
 - [Mastercard Agent Pay](https://developer.mastercard.com/) - Tokenized payments and agent wallet integration via card networks.
@@ -134,7 +133,7 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 *How machines find the right service for a task.*
 
 - [ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) - On-chain trust registry. Query by capability, entity type, reputation. Universal for agents, services, and infrastructure.
-- [Google A2A Agent Cards](https://google.github.io/a2a/) - JSON manifests at `/.well-known/agent.json`. Describe capabilities, skills, and interaction modes.
+- [A2A Agent Cards](https://a2a-protocol.org/) - JSON manifests at `/.well-known/agent.json`. Describe capabilities, skills, and interaction modes.
 - [Glama](https://glama.ai/mcp/servers) - MCP server directory. Search, verify, and browse Model Context Protocol servers.
 - [Smithery](https://smithery.ai/) - MCP server hosting and marketplace. Deploy and discover MCP servers.
 - [mcp.so](https://mcp.so/) - MCP server registry. Searchable directory with install instructions.
@@ -148,10 +147,9 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 *How machines build track records — objective, on-chain, payment-weighted.*
 
 - [ERC-8004 Reputation Registry](https://eips.ethereum.org/EIPS/eip-8004) - On-chain reputation linked to identity entries. Stores feedback per interaction.
-- [Azeth Reputation](https://azeth.ai) - Multi-dimensional scoring: uptime, response time, success rate, volume. Auto-feedback after every x402 payment. Reputation-aware service routing.
-- [Karma3Labs](https://karma3labs.com/) - EigenTrust-based reputation. Compute global trust from local interactions via graph algorithms.
-- [Gitcoin Passport](https://passport.gitcoin.co/) - Sybil-resistance via composable identity stamps. Aggregate proofs into a single score.
-- [DegenScore](https://degenscore.com/) - On-chain reputation for DeFi. Soulbound tokens as proof of expertise.
+- [Azeth Reputation](https://azeth.ai) - Payment-gated on-chain opinions: raters must have net-paid the target $1+, weight is x^(2/3)-dampened net USD paid. L1-provable from L2s.
+- [OpenRank](https://github.com/Karma3Labs) - EigenTrust-based reputation (formerly Karma3 Labs). Compute global trust from local interactions via graph algorithms.
+- [Human Passport](https://passport.human.tech/) - Sybil-resistance via composable identity stamps (formerly Gitcoin Passport). Aggregate proofs into a single score.
 - [Orange Protocol](https://orangeprotocol.io/) - Reputation and trust infrastructure. Composable reputation models.
 
 ---
@@ -163,8 +161,7 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 ### Agent-to-Agent
 
 - [XMTP](https://xmtp.org/) - E2E encrypted messaging for wallets and agents. Discovery via address. ([Agent SDK](https://www.npmjs.com/package/@xmtp/agent-sdk))
-- [Google A2A](https://google.github.io/a2a/) - Agent-to-agent protocol. Task lifecycle, streaming, push notifications.
-- [IBM ACP](https://github.com/IBM/acp) - Agent Communication Protocol. Cross-framework messaging with human-in-the-loop.
+- [A2A](https://a2a-protocol.org/) - Agent-to-agent protocol (Linux Foundation, originated at Google). Task lifecycle, streaming, push notifications.
 - [Waku](https://waku.org/) - Decentralized messaging protocol. Privacy-preserving, censorship-resistant.
 
 ### Agent-to-Tool
@@ -184,7 +181,7 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 - [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) - Official OpenAI agent framework. Tool use, handoffs, guardrails.
 - [AutoGPT](https://agpt.co/) - Autonomous AI agent platform. Long-running tasks, web interaction.
 - [OpenClaw](https://openclaw.ai/) - Personal AI assistant. Cross-platform, skill-based architecture.
-- [Eliza](https://elizaos.github.io/eliza/) - Multi-agent simulation. Character-based agents with social interaction.
+- [Eliza](https://github.com/elizaOS/eliza) - Multi-agent simulation. Character-based agents with social interaction.
 - [CAMEL](https://www.camel-ai.org/) - Multi-agent communication framework for large-scale agent behavior.
 
 ---
@@ -194,12 +191,12 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 *MCP servers for payments, DeFi, and machine economy operations.*
 
 - [Agent Payment Node](https://github.com/nuanu-ai/agent-payment-node) - Local CLI and stdio MCP payments on macOS; signing requires foreground owner approval.
-- [Azeth MCP](https://www.npmjs.com/package/@azeth/mcp-server) - Smart accounts, x402 payments, reputation, discovery, messaging. 30+ tools. ([GitHub](https://github.com/azeth-protocol/mcp-server))
+- [Azeth MCP](https://www.npmjs.com/package/@azeth/mcp-server) - Smart accounts, x402 payments, reputation, discovery, messaging, cross-chain reputation proofs. 35+ tools. ([GitHub](https://github.com/azeth-protocol/mcp-server))
 - [Coinbase AgentKit](https://github.com/coinbase/agentkit) - Wallet management, transfers, DeFi on Base.
-- [deBridge MCP](https://debridge.finance/) - Cross-chain swaps and bridges.
-- [Stripe Agent Toolkit](https://github.com/stripe/agent-toolkit) - Payment processing, invoicing, subscriptions.
+- [deBridge MCP](https://debridge.com/) - Cross-chain swaps and bridges.
+- [Stripe Agent Toolkit](https://github.com/stripe/ai) - Payment processing, invoicing, subscriptions.
 - [Uniswap MCP](https://github.com/uniswap) - DEX swaps and liquidity.
-- [1inch MCP](https://1inch.io/) - DEX aggregator for optimal swap routing.
+- [1inch MCP](https://1inch.com/) - DEX aggregator for optimal swap routing.
 - [Aave MCP](https://aave.com/) - Lending and borrowing protocol tools.
 
 > See [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) for the comprehensive MCP directory.
@@ -210,13 +207,13 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 
 *SDKs, CLIs, and infrastructure for building in the machine economy.*
 
-- [Azeth SDK](https://www.npmjs.com/package/@azeth/sdk) - TypeScript SDK. Smart accounts, x402 payments, reputation, discovery, messaging. ([GitHub](https://github.com/azeth-protocol/sdk))
 - [AffixIO](https://github.com/AffixIO/SDK) - Node SDK that issues signed allow/deny decisions before agent tool calls and x402 payments run. MCP, LangChain, OpenAI Agents.
+- [Azeth SDK](https://www.npmjs.com/package/@azeth/sdk) - TypeScript SDK. Smart accounts, x402 payments, reputation, discovery, messaging. ([GitHub](https://github.com/azeth-protocol/sdk))
 - [Azeth CLI](https://www.npmjs.com/package/@azeth/cli) - Register, discover, pay, and manage machine participants from the terminal.
 - [viem](https://viem.sh/) - TypeScript Ethereum library. Type-safe, tree-shakeable.
 - [ethers.js](https://ethers.org/) - Complete Ethereum library. Widely adopted.
 - [wagmi](https://wagmi.sh/) - React hooks for Ethereum.
-- [Foundry](https://book.getfoundry.sh/) - Smart contract toolchain. Fast compilation, native fuzzing, Solidity testing.
+- [Foundry](https://getfoundry.sh/) - Smart contract toolchain. Fast compilation, native fuzzing, Solidity testing.
 - [Hardhat](https://hardhat.org/) - Ethereum development environment. Testing, debugging, deployment.
 - [Tenderly](https://tenderly.co/) - Smart contract monitoring, debugging, and simulation.
 
@@ -231,12 +228,12 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 | [ERC-7579](https://eips.ethereum.org/EIPS/eip-7579) | Modular accounts | Draft |
 | [ERC-7715](https://eips.ethereum.org/EIPS/eip-7715) | Session keys | Draft |
 | [ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) | Trust registry | Draft |
-| [ERC-8128](https://eips.ethereum.org/EIPS/eip-8128) | Agent authentication | Draft |
+| [ERC-8128](https://github.com/ethereum/ERCs/pull/1478) | Agent authentication | Draft (PR) |
 | [x402](https://github.com/coinbase/x402) | HTTP payments | Active |
 | [MCP](https://modelcontextprotocol.io/) | AI-to-tool protocol | Active |
-| [A2A](https://google.github.io/a2a/) | Agent-to-agent protocol | Active |
-| [CAIP-2](https://chainagnostic.org/CAIPs/caip-2) | Chain identifiers | Final |
-| [CAIP-10](https://chainagnostic.org/CAIPs/caip-10) | Account identifiers | Final |
+| [A2A](https://a2a-protocol.org/) | Agent-to-agent protocol | Active |
+| [CAIP-2](https://standards.chainagnostic.org/CAIPs/caip-2) | Chain identifiers | Final |
+| [CAIP-10](https://standards.chainagnostic.org/CAIPs/caip-10) | Account identifiers | Final |
 
 ---
 
