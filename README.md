@@ -70,7 +70,6 @@ Each layer below maps to a part of this stack.
 ### Full-Stack Trust Infrastructure
 
 - [Azeth](https://azeth.ai) - ERC-8004 identity, on-chain reputation, guardian-protected smart accounts, x402 payments, and service discovery in one SDK. MCP server with 30+ tools for AI agents. ([GitHub](https://github.com/azeth-protocol) | [npm](https://www.npmjs.com/package/@azeth/sdk))
-- [AffixIO](https://www.npmjs.com/package/affixio) - Agentic Pay Kit with x402BeforePay host-side action attestation before pay (signed yes/no on host, not person KYC), agenticPay, mcpToolGate, and KYA createAgentTrust. ([GitHub](https://github.com/AffixIO/SDK)) ([docs](https://www.affix-io.com/agent-trust/))
 
 ---
 
@@ -212,6 +211,7 @@ The HTTP-native payment protocol. Server returns 402 with payment requirements, 
 *SDKs, CLIs, and infrastructure for building in the machine economy.*
 
 - [Azeth SDK](https://www.npmjs.com/package/@azeth/sdk) - TypeScript SDK. Smart accounts, x402 payments, reputation, discovery, messaging. ([GitHub](https://github.com/azeth-protocol/sdk))
+- [AffixIO](https://github.com/AffixIO/SDK) - Node SDK that issues signed allow/deny decisions before agent tool calls and x402 payments run. MCP, LangChain, OpenAI Agents.
 - [Azeth CLI](https://www.npmjs.com/package/@azeth/cli) - Register, discover, pay, and manage machine participants from the terminal.
 - [viem](https://viem.sh/) - TypeScript Ethereum library. Type-safe, tree-shakeable.
 - [ethers.js](https://ethers.org/) - Complete Ethereum library. Widely adopted.
